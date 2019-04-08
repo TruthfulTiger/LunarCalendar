@@ -1,0 +1,479 @@
+@import "normalize.css"; /* From https://necolas.github.io/normalize.css/ - reset CSS styles */
+
+/* Keeps element sizing consistent */
+* {
+    box-sizing: border-box;
+}
+/* NB: Mobile-first design (see grid below) means that desktop-specific settings are further down */
+/* Sets overal height and prevents horizontal scrolling */
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+/* Sets background colour and fonts */
+body {
+    background-color: #cc0000;
+    font-family: Calibri, Arial, serif;
+    font-size: large;
+}
+
+small {
+    font-size: medium;
+}
+
+/* CTA styling */
+.cta {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #009681;
+    color: white;
+    line-height: 2rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: larger;
+    padding: 1rem 0;
+    border: none;
+    z-index: 100;
+}
+
+.cta a {
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    color: black;
+    margin: 0 0.8rem;
+    background-color: white;
+}
+
+/* Styles coin info section */
+.section {
+    display: inline-block;
+    width: 100%;
+    line-height: normal;
+    z-index: 10000;
+    background-color: white;
+    padding-bottom: 0.5rem;
+}
+
+.section a:link, a:visited {
+    color: #9b8351;
+    text-decoration: none;
+}
+
+.section a:hover, a:active {
+    color: #5d5137;
+    text-decoration: underline;
+}
+
+/* Styles calendar "what animal are you" form */
+.animal {
+    background-color: #222;
+    z-index: 100;
+    position: relative;
+    box-shadow: 10px 10px 5px rgba(10, 10, 10, 0.2);
+    bottom: 3rem;
+    color: white;
+    line-height: normal;
+    text-decoration: none;
+    font-size: large;
+    padding: 1.5rem;
+    border: none;
+}
+
+#result {
+    font-size: x-large;
+}
+
+#btn {
+    background-color: #222222;
+    display: inline-block;
+    color: white;
+    border: white solid thin;
+    text-decoration: none;
+    font-size: larger;
+    padding: 1.05rem 1.2rem;
+    float: left;
+}
+
+#btn:hover {
+    background-color: white;
+    color: #222222;
+}
+
+/* Positions top CTA */
+#cta1 {
+    position: relative;
+    top: 5.4rem;
+}
+
+/* Styles and positions buy now button */
+#buy {
+    background-color: #cc0000;
+    position: relative;
+    left: 10rem;
+    bottom: 4rem;
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    padding: 0.8rem 1.2rem;
+    border: #cc0000 solid thin;
+}
+
+#buy:hover {
+    background-color: white;
+    border: #cc0000 solid thin;
+    color: #cc0000;
+}
+
+/* Positions "See all" link */
+#all {
+    position: relative;
+    float: right;
+    right: 2rem;
+}
+
+/* Generic centering helper class */
+.center {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Make images responsive */
+/* Wheel styling */
+#wheel {
+    position: relative;
+    left: -8rem;
+    display: inline; /* Allows for section to overlap image */
+    width: 30rem; /* Don't let wheel get any bigger than original size */
+    margin: 5rem 0 -18rem 0; /* Don't centre on mobile */
+    z-index: -100000;
+    height: auto; /* Make wheel responsive */
+}
+/* Coins styling */
+#coins {
+    display: block;
+    float: right;
+    width: 90%; /* Don't let image get any bigger than original size */
+    z-index: -1000;
+    height: auto; /* Make wheel responsive */
+}
+
+/* Other images */
+.responsive {
+    display: block;
+    width: 90%; /* Don't let image get any bigger than original size */
+    height: auto; /* Make wheel responsive */
+}
+
+/* Container */
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Footer styling */
+footer {
+    z-index: 10;
+    padding-top: 1.5rem;
+    padding-bottom: 20rem;
+    background-color: #eeeeee;
+}
+
+footer p, h3 {
+    padding-left: 1rem;
+}
+
+footer a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover, a:active {
+    text-decoration: underline;
+}
+
+/* Social icons */
+.social {
+    background-color: #253746;
+    padding: 1rem;
+    margin: 0 0.1rem 5rem 0;
+    font-size: large;
+    color: white;
+    border-radius: 5rem;
+}
+
+/* Icon-specific settings */
+#fb {
+    padding: 0.5rem 0.75rem;
+}
+
+#tw {
+    padding: 0.5rem;
+}
+
+#gp {
+    padding: 0.5rem 0.35rem;
+}
+
+#pi {
+    padding: 0.5rem 0.65rem;
+}
+
+#yt {
+    padding: 0.5rem 0.45rem;
+}
+
+#ig {
+    padding: 0.5rem 0.55rem;
+}
+
+.social:hover {
+    transition: ease 2s;
+    background-color: orange;
+}
+
+/* Footer navigation styling */
+.ftnav {
+    margin-bottom: 5rem;
+}
+
+.ftnav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 19rem;
+ }
+
+.ftnav li a {
+    display: block;
+    color: #000;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    border-bottom: silver solid thin;
+}
+
+.ftnav li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive grid */
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+/* Hide back to top on mobile */
+#back-to-top {
+    display: none;
+}
+/* Main navigation styling */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1000000;
+    border-bottom: silver solid thin;
+}
+
+.nav img {
+    padding-top: 0.3rem;
+    display: inline-block;
+    float: left;
+    margin-right: 12rem;
+}
+
+/* Hamburger menu */
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.nav #links {
+    display: none;
+}
+
+/* Style main navigation links */
+.nav a {
+    display: block;
+    color: black;
+    text-align: right;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: orangered;
+    padding-bottom: 0.8rem;
+    border-bottom: orangered dotted;
+}
+
+/* Style the hamburger menu */
+.nav a.icon {
+    background: white;
+    color: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Responsive forms */
+/* Style inputs and select elements */
+select {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: x-large;
+    resize: vertical;
+}
+
+input {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: x-large;
+    resize: vertical;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Set up responsive grid */
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    #back-to-top {
+        display: none;
+    }
+    #wheel {
+        position: relative;
+        left: 0rem;
+        display: inline;
+        width: 30rem; /* Don't let wheel get any bigger than original size */
+        margin: 5rem 0 -18rem 0; /* Don't centre on tablet */
+        z-index: -100000;
+        height: auto; /* Make wheel responsive */
+    }
+    /* Reposition buy button on tablet */
+    #buy {
+        background-color: #cc0000;
+        position: relative;
+        left: 30rem;
+        bottom: 4rem;
+        color: white;
+        text-decoration: none;
+        font-size: larger;
+        padding: 0.8rem 1.2rem;
+        border: #cc0000 solid thin;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    /* Back to top button: http://jsfiddle.net/gilbitron/Lt2wH/ - only show on desktop */
+    #back-to-top {
+        position: fixed;
+        display: block;
+        bottom: 2rem;
+        right: 1rem;
+        z-index: 9999999999;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        line-height: 3rem;
+        background: #253746;
+        color: white;
+        cursor: pointer;
+        border: 0;
+        text-decoration: none;
+        transition: opacity 0.2s ease-out;
+        opacity: 0;
+    }
+    /* Desktop-specific navigation link styling */
+    .nav a {
+        display: inline-block;
+        color: black;
+        text-align: right;
+        padding: 3rem 1.05rem 1rem 1.05rem;
+        text-decoration: none;
+    }
+
+    .nav a:hover {
+        color: orangered;
+        padding-bottom: 0.8rem;
+        border-bottom: orangered dotted;
+    }
+
+    /* Back to top button show on desktop */
+    #back-to-top.show {
+        opacity: 1;
+    }
+    /* Style the hamburger menu */
+    .nav a.icon {
+        display: none;
+    }
+    .nav #links {
+        display: inline-block;
+    }
+    /* Wheel styling */
+    #wheel {
+        background-color: white;
+        display: inline;
+        position: relative;
+        left: 0;
+        width: 100%; /* Don't let wheel get any bigger than original size */
+        margin: 8rem auto -50rem auto; /* Centre wheel on page */
+        z-index: -100000;
+        height: auto; /* Make wheel responsive */
+    }
+    /* Reposition buy now button on desktop */
+    #buy {
+        background-color: #cc0000;
+        position: relative;
+        left: 30rem;
+        bottom: 4rem;
+        color: white;
+        text-decoration: none;
+        font-size: larger;
+        padding: 0.8rem 1.2rem;
+        border: #cc0000 solid thin;
+    }
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}

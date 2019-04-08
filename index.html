@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Calendar</title>
+</head>
+<link href="css/styles.css" rel="stylesheet">
+<!-- Font Awesome for icons -->
+<link href="fontawesome-free-5.8.1-web/css/all.min.css" rel="stylesheet">
+<body>
+<header>
+    <nav class="nav">
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="#" class="icon">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="container nav">
+            <!-- Main navigation -->
+            <img src="images/royalmint_logo.png">
+            <div class="nav" id="links">
+                <a href="#">Coins</a>
+                <a href="#">Gifts</a>
+                <a href="#">Invest</a>
+                <a href="#">Visit</a>
+                <a href="#">Business</a>
+                <a href="#">Discover</a>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true" title="Search"></i></a>
+                <a href="#" aria-label="Account"><i class="fas fa-user" aria-hidden="true" title="Account"></i></a>
+                <a href="#" aria-label="Basket"><i class="fas fa-shopping-cart" aria-hidden="true" title="Basket"></i></a>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- First CTA -->
+<div class="cta" id="cta1">
+    Free Delivery on all UK orders over £45 <a href="#">Shop Now</a>
+</div>
+<!-- Wheel -->
+<div class="container center">
+<img src="images/Zodiac%20Wheel.gif" id="wheel" />
+</div>
+<!-- Contains form and coin information -->
+<section class="section">
+    <!-- Calendar form -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 animal">
+            <p><span id="result">What animal are you? Enter your birthday...</span></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 animal">
+            <select id="day">
+                <option>Day</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+        </div>
+        <div class="col-3 animal">
+            <select id="month">
+                <option>Month</option>
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+            </select>
+        </div>
+        <div class="col-3 animal">
+            <select id="year">
+                <option>Year</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1970">1970</option>
+                <option value="1969">1969</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1966">1966</option>
+                <option value="1965">1965</option>
+                <option value="1964">1964</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1960">1960</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1956">1956</option>
+                <option value="1955">1955</option>
+                <option value="1954">1954</option>
+                <option value="1953">1953</option>
+                <option value="1952">1952</option>
+                <option value="1951">1951</option>
+                <option value="1950">1950</option>
+                <option value="1949">1949</option>
+                <option value="1948">1948</option>
+                <option value="1947">1947</option>
+                <option value="1946">1946</option>
+                <option value="1945">1945</option>
+                <option value="1944">1944</option>
+                <option value="1943">1943</option>
+                <option value="1942">1942</option>
+                <option value="1941">1941</option>
+                <option value="1940">1940</option>
+                <option value="1939">1939</option>
+                <option value="1938">1938</option>
+                <option value="1937">1937</option>
+                <option value="1936">1936</option>
+                <option value="1935">1935</option>
+                <option value="1934">1934</option>
+                <option value="1933">1933</option>
+                <option value="1932">1932</option>
+                <option value="1931">1931</option>
+                <option value="1930">1930</option>
+                <option value="1929">1929</option>
+                <option value="1928">1928</option>
+                <option value="1927">1927</option>
+                <option value="1926">1926</option>
+                <option value="1925">1925</option>
+                <option value="1924">1924</option>
+            </select>
+        </div>
+        <div class="col-3 animal">
+            <a href="#" id="btn">Find your animal</a>
+        </div>
+    </div>
+
+    <!-- Privacy notice and coin info -->
+    <p>We will not store your information or sell your data to third parties. For more information, refer to our <a href="#">Privacy Policy</a> .</p>
+    <div class="row">
+        <div class="col-6">
+            <h2>The Lunar series</h2>
+            <p>The Lunar series celebrates the Chinese zodiac, a time-honoured practice of sharing gifts and setting important dates to celebrate significant life events. Combining British and Chinese heritage, the designs reveal the story of each of the animals of the Chinese zodiac.</p>
+            <h2>The Year of the Pig</h2>
+            <p>The Pig is thought of as an intellectual in Chinese culture – a character with a great thirst for knowledge. Therefore, people born in the Year of the Pig are understood to be inquisitive and intelligent and they enjoy exploring different solutions to problems.</p>
+            <p>People born in the Year of the Pig are known to be diligent, compassionate and generous. They value friendship highly, and never betray their friends, unless in drastic circumstances, and are popular in their social circles.</p>
+            <p>Those born under this sign are punctual and very dependable. They devote all their energy to achieving their goals, because of their great concentration, and they rarely seek help but enjoy helping others.</p>
+
+            <p>People born in the Year of the Pig are admired for their kindness and are among the gentlest and most selfless of the signs in the Chinese zodiac.</p>
+        </div>
+        <div class="col-6">
+            <img src="images/pig_lockup.jpg" id="coins" alt="Lunar coin - Year of the Pig">
+            <a href="#" id="buy">Buy Now</a>
+        </div>
+    </div>
+    <h3><a href="#" id="all">See All</a>Browse all twelve lunar animals</h3>
+
+    <!-- Pseudo-slider with quick links -->
+    <div class="slider row">
+        <div class="col-3">
+            <img src="images/artboard-5lunar.jpg" class="responsive" alt="Year of the Rat" width="300px">
+        </div>
+        <div class="col-3">
+            <img src="images/artboard-6lunar.jpg" class="responsive" alt="Year of the Ox" width="300px">
+        </div>
+        <div class="col-3">
+            <img src="images/artboard-7lunar.jpg" class="responsive" alt="Year of the Tiger" width="300px">
+        </div>
+        <div class="col-3">
+            <img src="images/artboard-8lunar.jpg" class="responsive" alt="Year of the Rabbit" width="300px">
+        </div>
+    </div>
+    <br/>
+    <p class="center">2019 is the Year of the Pig | What lunar animal are you? |</p>
+    <br/>
+</div>
+</section>
+<!-- Standard footer -->
+<footer>
+    <div class="cta">
+        <div class="row">
+            <div class="col-12">
+                <h3>Sign up to our newsletter</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>Receive updates about our products, services and offers by email</p>
+            </div>
+        </div>
+        <div class="row container center">
+            <div class="col-12 col-75">
+                <input type="email" placeholder="Enter your email address here" />
+            </div>
+        </div>
+    </div>
+    <!-- Footer navigation -->
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="ftnav">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Our History</a></li>
+                        <li><a href="#">Our Location</a></li>
+                        <li><a href="#">Press Centre</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="ftnav">
+                    <h4>Help Topics</h4>
+                    <ul>
+                        <li><a href="#">Privacy & Cookies</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Secure Ordering</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="ftnav">
+                    <h4>Working With Us</h4>
+                    <ul>
+                        <li><a href="#">Job Vacancies</a></li>
+                        <li><a href="#">International Sales</a></li>
+                        <li><a href="#">Circulating Coin</a></li>
+                        <li><a href="#">Retail Sales</a></li>
+                        <li><a href="#">Royal Mint Bullion</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3">
+
+            </div>
+        </div>
+        <!-- Social links -->
+        <p>Follow us on</p>
+        <p>
+            <a href="#" aria-label="Facebook"><i id="fb" class="fab fa-facebook-f social" aria-hidden="true" title="Facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i id="tw" class="fab fa-twitter social" aria-hidden="true" title="Twitter"></i></a>
+            <a href="#" aria-label="Google Plus"><i id="gp" class="fab fa-google-plus-g social" aria-hidden="true" title="Google Plus"></i></a>
+            <a href="#" aria-label="Pinterest"><i id="pi" class="fab fa-pinterest-p social" aria-hidden="true" title="Pinterest"></i></a>
+            <a href="#" aria-label="Youtube"><i id="yt" class="fab fa-youtube social" aria-hidden="true" title="Youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i id="ig" class="fab fa-instagram social" aria-hidden="true" title="Instagram"></i></a>
+        </p>
+        <!-- Copyright and company info -->
+        <p>
+            <small>© The Royal Mint Limited 2019. <a href="#">Privacy and cookies</a> | <a href="#">Terms and conditions</a> </small>
+        </p>
+        <p>
+            <small>The Royal Mint Limited whose registered office is at Llantrisant, Pontyclun, CF72 8YT, United Kingdom (registered in England and Wales No. 06964873).</small>
+        </p>
+        </div>
+    <a href="#" id="back-to-top" title="Back to top"><i class="fa fa-angle-up"></i> </a>
+</footer>
+<!-- Scripts -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- https://github.com/Keyframes/jQuery.Keyframes - makes it much easier to control animations -->
+<script src="js/jquery.keyframes.min.js"></script>
+<script src="js/wheel.js"></script>
+<script>
+    // Collapsable hamburger menu - rewritten in jQuery
+    $(function () {
+        let l = $("#links");
+        let i = $(".icon");
+
+        i.on('click', function()
+        {
+            l.toggle();
+        });
+
+        // Attempt to fix bug where resizing browser after using hamburger menu would still hide links.
+        // It seems I can either have that bug or a hamburger menu that doesn't work
+        /*if (window.matchMedia('(max-width: 768px)').matches)
+        {
+            i.on('click', function()
+            {
+                l.toggle();
+            });
+        } else {
+            l.show();
+        } */
+
+        // Back to top button: http://jsfiddle.net/gilbitron/Lt2wH/
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                backToTop = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+    });
+</script>
+</body>
+</html>
